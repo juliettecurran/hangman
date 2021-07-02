@@ -1,11 +1,12 @@
 import React from 'react';
 
+// rafce
 const Header = () => {
   return (
-    <div>
+    <>
       <h1>Hangman</h1>
-      <p>Guess a letter if you dare</p>
-    </div>
+      <p>Guess the word, if you dare...</p>
+    </>
   );
 };
 

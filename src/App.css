@@ -94,8 +94,8 @@ h1 {
 }
 
 .popup {
-  background: #2980b9;
-  border-radius: 5px;
+  background: #9bb1ff;
+  border-radius: 15px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
@@ -104,8 +104,10 @@ h1 {
 .popup button {
   cursor: pointer;
   background-color: #fff;
-  color: #2980b9;
+  color: #9729b9;
   border: 0;
+  border-radius: 10px;
+
   margin-top: 20px;
   padding: 12px 20px;
   font-size: 16px;
@@ -117,6 +119,11 @@ h1 {
 
 .popup button:focus {
   outline: 0;
+}
+
+.popup button:hover {
+  background-color: #9729b9;
+  color: #fff;
 }
 
 .notification-container {
