@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Figure from './Components/Figure';
+import Header from './Components/Header';
+import IncorrectLetters from './Components/IncorrectLetters';
+import Word from './Components/Word';
+
+const words = [
+  'kidnapped',
+  'rainbows',
+  'tricked',
+  'roses',
+  'sunshine',
+  'dangerous',
+  'ambush',
+  'fairyland',
+  'teddybear',
+  'demon',
+  'culprit',
+];
+
+let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {
+  /* States */
+
+  const { playable, setPlayable } = useState(true);
+  const { correctLetters, setCorrectLetters } = useState([]);
+  const { incorrectLetters, setIncorrectLetters } = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header />
+      <Figure />
+      <IncorrectLetters incorrectLetters={incorrectLetters} />
+      <Word selectedWord={selectedWord} correctLetters={correctLetters} />
     </div>
   );
 }
